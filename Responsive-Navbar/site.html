@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initil-scale=1.0"/>
+        <link rel="stylesheet" href="site.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <title>Responsive Navbar</title> 
+
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#">Jumpers</a></div>
+            <ul class="links">
+                <li><a href="hero">Home</a></li>
+                <li><a href="about">about</a></li>
+                <li><a href="contacts">Contacts</a></li>
+            </ul>
+        <a href="#" class="action_btn">Get Started</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>  
+        </div>
+
+        <div class="dropdown_menu ">
+            <li><a href="hero">Home</a></li>
+            <li><a href="about">about</a></li>  
+            <li><a href="contacts">Contacts</a></li>
+            <li><a href="#" class="action_btn">Get Started</a></li>
+        </div>
+        </header>
+         
+        <main>
+            <section id="hero">
+                <h1>Welcome</h1>
+                <p>Hi  I am a jumper <br> lets jump!</p>
+
+            </section>
+        </main>
+
+
+        <script>
+            const togglebtn = document.querySelector('.toggle_btn')
+            const togglebtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            togglebtn.onclick=function(){
+                dropDownMenu.classList.toggle('open')
+                const isopen =  dropDownMenu.classList.contains('open')
+                
+                togglebtnIcon.classList = isopen
+                ?'fa-solid fa-xmark'
+                :'fa-solid fa-bars'
+            }
+
+</script>
+    </body>
+</html>
